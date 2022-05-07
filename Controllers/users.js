@@ -14,7 +14,6 @@ const emailBody = async (body) => {
 
 module.exports.Register = async (req, res, next) => {
   try {
-    // console.log(req.body);
     const userData = await User.create(req.body);
     const emailData = await emailBody(req.body);
 
